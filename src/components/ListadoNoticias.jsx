@@ -1,11 +1,12 @@
 import React from 'react';
-import Noticia from './Noticias';
+import Noticias from './Noticias';
+import PropTypes from 'prop-types';
 
 const ListadoNoticias = ({noticias}) => {
     return ( 
         <div className="row">
             {noticias.map(noticia => (
-                <Noticia
+                <Noticias
                     key={Noticia.url}
                     noticia={noticia}
                 />
@@ -13,5 +14,9 @@ const ListadoNoticias = ({noticias}) => {
         </div>
     );
 }
- 
+
+ListadoNoticias.propTypes = {
+    noticias:  PropTypes.array.isRequired
+}
+
 export default ListadoNoticias;

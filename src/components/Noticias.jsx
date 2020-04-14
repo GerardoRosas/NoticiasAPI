@@ -1,6 +1,7 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const Noticas = ({noticia}) => {
+const Noticias = ({noticia}) => {
 
     const {urlToImage, url, title, description, source} = noticia;
 
@@ -30,5 +31,9 @@ const Noticas = ({noticia}) => {
         </div>
      );
 }
+
+Noticias.propTypes = {
+    noticia:  PropTypes.object.isRequired
+}
  
-export default Noticas;
+export default Noticias;
